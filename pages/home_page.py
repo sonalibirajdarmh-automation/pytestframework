@@ -14,6 +14,7 @@ class HomePage:
         return self.driver.find_element(*self.elm_lnk_logout).is_displayed()
     def clickLogout(self):
         self.driver.find_element(*self.elm_lnk_logout).click()
+        print("pytest")
 
     def ClickNewLead(self):
         return self.driver.find_element(*self.elm_lnk_newlead).click()
