@@ -12,9 +12,9 @@ class HomePage:
 
     def VerifyLogout(self):
         return self.driver.find_element(*self.elm_lnk_logout).is_displayed()
-    def clickLogout(self):
+    def clickLogout(self):        
         self.driver.find_element(*self.elm_lnk_logout).click()
-        print("In develope branch1")
+
     def ClickNewLead(self):
         return self.driver.find_element(*self.elm_lnk_newlead).click()
 
