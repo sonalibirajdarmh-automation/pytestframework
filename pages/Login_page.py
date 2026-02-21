@@ -13,6 +13,7 @@ class LoginPage:
     def verify_title(self):
         return  self.driver.title
 
+
     def verify_logo(self):
         return self.driver.find_element(*self.elm_img_logo).is_displayed()
 
