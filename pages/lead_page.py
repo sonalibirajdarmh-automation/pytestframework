@@ -22,6 +22,7 @@ class Leads:
         self.setCompany(company)
         self.clickSave()
 
+
     def setlastname(self, lname):
         self.driver.find_element(*self.elm_tb_lastname).send_keys(lname)
 
