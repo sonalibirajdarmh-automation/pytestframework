@@ -21,8 +21,7 @@ class LoginPage:
         self.setUsername(uid)
         self.setPassword(pwd)
         self.click_login()
-        print("Login Successful")
-        print("hello git")
+
 
     def setUsername(self,uid):
         self.driver.find_element(*self.elm_tb_username).clear()

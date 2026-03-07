@@ -8,7 +8,9 @@ from pages.Login_page import LoginPage
 from pages.home_page import HomePage
 from pages.lead_page import Leads
 from pages.New_Account import NewAccount
-
+from pages.New_potential import NewPotential
+from pages.New_Ticket import NewTicket
+from pages.New_product  import NewProduct
 
 def test_verify_title_TC01(driver):
     #driver=launchApp()
@@ -70,6 +72,46 @@ def test_CreateNewAccount(driver):
     #assert na.verify_label_Accountname("Test_vtiger") == True
     time.sleep(5)
     hp.clickLogout()
+
+def test_CreateNewPotential(driver):
+    lp=LoginPage(driver)
+    lp.login(uid="admin", pwd="admin")
+    hp=HomePage(driver)
+    hp.ClickNewPotential()
+    np=NewPotential(driver)
+    np.createPotential("vtiger-1000")
+    time.sleep(5)
+    hp.clickLogout()
+
+
+def test_CreateNewTicket(driver):
+    lp=LoginPage(driver)
+    lp.login(uid="admin", pwd="admin")
+    hp=HomePage(driver)
+    hp.ClickNewTicket()
+    nt=NewTicket(driver)
+    nt.createticket("Testing")
+    assert nt.verify_ticket("Testing") == True
+    time.sleep(5)
+    hp.clickLogout()
+
+
+def test_CreateNewProduct(driver):
+    lp=LoginPage(driver)
+    lp.login(uid="admin", pwd="admin")
+    hp=HomePage(driver)
+    hp.ClickNewproduct()
+    np=NewProduct(driver)
+    np.CreateNewProduct("product1")
+
+    time.sleep(5)
+    hp.clickLogout()
+
+
+def
+
+
+
 
 
 
