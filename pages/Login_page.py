@@ -13,6 +13,7 @@ class LoginPage:
     def verify_title(self):
         return  self.driver.title
 
+
     def verify_logo(self):
         return self.driver.find_element(*self.elm_img_logo).is_displayed()
 
@@ -20,8 +21,7 @@ class LoginPage:
         self.setUsername(uid)
         self.setPassword(pwd)
         self.click_login()
-        print("Login Successful")
-        print("hello git")
+
 
     def setUsername(self,uid):
         self.driver.find_element(*self.elm_tb_username).clear()
